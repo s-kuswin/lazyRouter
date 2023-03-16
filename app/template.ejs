@@ -1,0 +1,26 @@
+export const <%= className %> =  [
+  <% routers.forEach(router => {%>
+    {
+        path:'<%=router.path %>',
+        name: '<%=router.name %>',
+        component: () => import('<%=router.component %>'),
+        meta: {
+            title:'<%=router.title %>'
+        },
+        <% if(router.children && router.children.length){%>
+            children:[
+                <% router.children.forEach(item =>{%>
+                    {
+                        path:'<%=item.path %>',
+                        name: '<%=item.name %>',
+                        component: () => import('<%=item.component %>'),
+                        meta: {
+                            title:'<%=item.title %>'
+                        },
+                    },
+                <%})%>                    
+            ]
+        <%}%>
+    },
+  <%})%>
+]

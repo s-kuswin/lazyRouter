@@ -1,0 +1,28 @@
+{
+  "name": "lazy-router",
+  "version": "0.0.3",
+  "description": "",
+  "exports": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "lazyrouter": "bin/lazyrouter.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "commander": "^9.4.0",
+    "ejs": "^3.1.8",
+    "fs": "0.0.1-security",
+    "inquirer": "^9.1.0",
+    "js-beautify": "^1.14.7",
+    "log-symbols": "^5.1.0",
+    "ora": "^6.1.2"
+  },
+  "engines": {
+    "node": ">=14.16"
+  }
+}
